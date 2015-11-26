@@ -31,7 +31,7 @@ func main() {
     mux1.GET("/keys/:id",get)
     mux1.GET("/keys",getall)
     server := http.Server{
-      Addr: "0.0.0.0:3000",
+      Addr: "127.0.0.1:3000",
       Handler: mux1,
     }
     server.ListenAndServe()
@@ -44,7 +44,7 @@ func main() {
     mux2.GET("/keys/:id",get)
     mux2.GET("/keys",getall)
     server2 := http.Server{
-      Addr:        "0.0.0.0:3001",
+      Addr:        "127.0.0.1:3001",
       Handler: mux2,
     }
     server2.ListenAndServe()
@@ -56,7 +56,7 @@ func main() {
   mux3.GET("/keys/:id",get)
   mux3.GET("/keys",getall)
   server3 := http.Server{
-          Addr:        "0.0.0.0:3002",
+          Addr:        "127.0.0.1:3002",
           Handler: mux3,
   }
   server3.ListenAndServe()
